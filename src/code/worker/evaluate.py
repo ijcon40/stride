@@ -8,12 +8,13 @@ from logging import getLogger
 from multiprocessing import Manager
 from time import sleep
 
-from chess_zero.agent.model_chess import ChessModel
-from chess_zero.agent.player_chess import ChessPlayer
-from chess_zero.config import Config
-from chess_zero.env.chess_env import ChessEnv, Winner
-from chess_zero.lib.data_helper import get_next_generation_model_dirs, pretty_print
-from chess_zero.lib.model_helper import save_as_best_model, load_best_model_weight
+
+from stride.src.code.agent.model_chess import ChessModel
+from stride.src.code.agent.player_chess import ChessPlayer
+from stride.src.code.config import Config
+from stride.src.code.env.chess_env import ChessEnv, Winner
+from stride.src.code.lib.data_helper import get_next_generation_model_dirs, pretty_print
+from stride.src.code.lib.model_helper import save_as_best_model, load_best_model_weight
 
 logger = getLogger(__name__)
 

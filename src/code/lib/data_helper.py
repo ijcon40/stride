@@ -10,7 +10,7 @@ from logging import getLogger
 
 import chess
 import pyperclip
-from chess_zero.config import ResourceConfig
+from stride.src.code.config import ResourceConfig
 
 logger = getLogger(__name__)
 

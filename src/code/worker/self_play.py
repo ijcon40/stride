@@ -10,12 +10,12 @@ from multiprocessing import Manager
 from threading import Thread
 from time import time
 
-from chess_zero.agent.model_chess import ChessModel
-from chess_zero.agent.player_chess import ChessPlayer
-from chess_zero.config import Config
-from chess_zero.env.chess_env import ChessEnv, Winner
-from chess_zero.lib.data_helper import get_game_data_filenames, write_game_data_to_file, pretty_print
-from chess_zero.lib.model_helper import load_best_model_weight, save_as_best_model, \
+from stride.src.code.agent.model_chess import ChessModel
+from stride.src.code.agent.player_chess import ChessPlayer
+from stride.src.code.config import Config
+from stride.src.code.env.chess_env import ChessEnv, Winner
+from stride.src.code.lib.data_helper import get_game_data_filenames, write_game_data_to_file, pretty_print
+from stride.src.code.lib.model_helper import load_best_model_weight, save_as_best_model, \
     reload_best_model_weight_if_changed
 
 logger = getLogger(__name__)
@@ -73,8 +73,6 @@ class SelfPlayWorker:
                     reload_best_model_weight_if_changed(self.current_model)
                 futures.append(executor.submit(self_play_buffer, self.config, cur=self.cur_pipes)) # Keep it going
 
-        if len(data) > 0:
-            self.flush_buffer()
 
     def load_model(self):
         """

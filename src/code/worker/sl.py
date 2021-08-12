@@ -11,10 +11,10 @@ from time import time
 
 import chess.pgn
 
-from chess_zero.agent.player_chess import ChessPlayer
-from chess_zero.config import Config
-from chess_zero.env.chess_env import ChessEnv, Winner
-from chess_zero.lib.data_helper import write_game_data_to_file, find_pgn_files
+from stride.src.code.agent.player_chess import ChessPlayer
+from stride.src.code.config import Config
+from stride.src.code.env.chess_env import ChessEnv, Winner
+from stride.src.code.lib.data_helper import write_game_data_to_file, find_pgn_files
 
 logger = getLogger(__name__)
 

@@ -156,11 +156,11 @@ class Config:
         self.resource = ResourceConfig()
 
         if config_type == "mini":
-            import chess_zero.configs.mini as c
+            import stride.src.code.configs.mini as c
         elif config_type == "normal":
-            import chess_zero.configs.normal as c
+            import stride.src.code.configs.normal as c
         elif config_type == "distributed":
-            import chess_zero.configs.distributed as c
+            import stride.src.code.configs.distributed as c
         else:
             raise RuntimeError(f"unknown config_type: {config_type}")
         self.model = c.ModelConfig()

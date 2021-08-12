@@ -1,1 +1,1 @@
-python src/chess_zero/run.py uci
+python src/code/run.py uci

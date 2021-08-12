@@ -8,7 +8,7 @@ from threading import Thread
 
 import numpy as np
 
-from chess_zero.config import Config
+from stride.src.code.config import Config
 
 
 class ChessModelAPI:

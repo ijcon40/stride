@@ -1,4 +1,4 @@
-name: chess_zero
+name: code
 channels:
   - menpo
   - soumith

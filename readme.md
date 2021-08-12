@@ -70,7 +70,7 @@ To use the new SL process is as simple as running in the beginning instead of th
 Once the model converges enough with SL play-data we just stop the worker "sl" and start the worker "self" so the model will start improving now due to self-play data.
 
 ```bash
-python src/chess_zero/run.py sl
+python src/code/run.py sl
 ```
 If you want to use this new SL step you will have to download big PGN files (chess files) and paste them into the `data/play_data` folder ([FICS](http://ficsgames.org/download.html) is a good source of data). You can also use the [SCID program](http://scid.sourceforge.net/) to filter by headers like player ELO, game result and more.
 
@@ -94,9 +94,9 @@ Now it's possible to train the model in a distributed way. The only thing needed
 So, in order to contribute to the distributed team you just need to run the three workers locally like this:
 
 ```bash
-python src/chess_zero/run.py self --type distributed (or python src/chess_zero/run.py sl --type distributed)
-python src/chess_zero/run.py opt --type distributed
-python src/chess_zero/run.py eval --type distributed
+python src/code/run.py self --type distributed (or python src/code/run.py sl --type distributed)
+python src/code/run.py opt --type distributed
+python src/code/run.py eval --type distributed
 ```
 
 ### GUI
@@ -143,7 +143,7 @@ Self-Play
 --------
 
 ```bash
-python src/chess_zero/run.py self
+python src/code/run.py self
 ```
 
 When executed, Self-Play will start using BestModel.
@@ -157,7 +157,7 @@ Trainer
 -------
 
 ```bash
-python src/chess_zero/run.py opt
+python src/code/run.py opt
 ```
 
 When executed, Training will start.
@@ -172,7 +172,7 @@ Evaluator
 ---------
 
 ```bash
-python src/chess_zero/run.py eval
+python src/code/run.py eval
 ```
 
 When executed, Evaluation will start.
