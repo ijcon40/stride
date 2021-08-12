@@ -16,8 +16,8 @@ from keras.layers.merge import Add
 from keras.layers.normalization.batch_normalization import BatchNormalization
 from keras.regularizers import l2
 
-from stride.src.code.agent.api_chess import ChessModelAPI
-from stride.src.code.config import Config
+from src.code.agent.api_chess import ChessModelAPI
+from src.code.config import Config
 
 # noinspection PyPep8Naming
 
@@ -40,6 +40,7 @@ class ChessModel:
         self.model = None  # type: Model
         self.digest = None
         self.api = None
+        self.pipes = None
 
     def get_pipes(self, num = 1):
         """
@@ -52,7 +53,8 @@ class ChessModel:
         if self.api is None:
             self.api = ChessModelAPI(self)
             self.api.start()
-        return [self.api.create_pipe() for _ in range(num)]
+        self.pipes = [self.api.create_pipe() for _ in range(num)]
+        return self.pipes
 
     def build(self):
         """

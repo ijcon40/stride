@@ -2,7 +2,7 @@ python-chess==0.25.1
 tensorflow==2.6.0rc0
 keras==2.6.0rc0
 profilehooks
-numpy
-pyperclip
+numpy~=1.19.5
+pyperclip~=1.8.2
 h5py
-tqdm
+tqdm~=4.62.0

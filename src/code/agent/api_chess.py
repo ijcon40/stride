@@ -8,7 +8,7 @@ from threading import Thread
 
 import numpy as np
 
-from stride.src.code.config import Config
+from src.code.config import Config
 
 
 class ChessModelAPI:
@@ -35,7 +35,9 @@ class ChessModelAPI:
         :return:
         """
         prediction_worker = Thread(target=self._predict_batch_worker, name="prediction_worker")
-        prediction_worker.daemon = True
+        # prediction_worker.daemon = True
+        prediction_worker.daemon = False
+
         prediction_worker.start()
 
     def create_pipe(self):

@@ -11,11 +11,11 @@ from random import shuffle
 
 import numpy as np
 
-from stride.src.code.agent.model_chess import ChessModel
-from stride.src.code.config import Config
-from stride.src.code.env.chess_env import canon_input_planes, is_black_turn, testeval
-from stride.src.code.lib.data_helper import get_game_data_filenames, read_game_data_from_file, get_next_generation_model_dirs
-from stride.src.code.lib.model_helper import load_best_model_weight
+from src.code.agent.model_chess import ChessModel
+from src.code.config import Config
+from src.code.env.chess_env import canon_input_planes, is_black_turn, testeval
+from src.code.lib.data_helper import get_game_data_filenames, read_game_data_from_file, get_next_generation_model_dirs
+from src.code.lib.model_helper import load_best_model_weight
 
 from keras.optimizers import Adam
 from keras.callbacks import TensorBoard

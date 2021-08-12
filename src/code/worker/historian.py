@@ -13,12 +13,12 @@ from time import time
 
 import chess.pgn
 
-from stride.src.code.agent.model_chess import ChessModel
-from stride.src.code.agent.player_chess import ChessPlayer
-from stride.src.code.config import Config
-from stride.src.code.env.chess_env import ChessEnv, Winner
-from stride.src.code.lib.data_helper import get_game_data_filenames, write_game_data_to_file, pretty_print
-from stride.src.code.lib.model_helper import load_best_model_weight, save_as_best_model, \
+from src.code.agent.model_chess import ChessModel
+from src.code.agent.player_chess import ChessPlayer
+from src.code.config import Config
+from src.code.env.chess_env import ChessEnv, Winner
+from src.code.lib.data_helper import get_game_data_filenames, write_game_data_to_file, pretty_print
+from src.code.lib.model_helper import load_best_model_weight, save_as_best_model, \
     reload_best_model_weight_if_changed
 from tqdm import tqdm
 
@@ -27,7 +27,7 @@ logger = getLogger(__name__)
 
 def start(config: Config):
     # take our pgns and parse them into games
-    pgn_files = glob.glob('/home/ijcon40/gsas_final/stride/data/pgns/pgns/*.pgn')
+    pgn_files = glob.glob('F:\\Lichess Elite Database\\Lichess Elite Database\\*.pgn')
     print('Historian: loading games')
     games = []
     games_to_load=1000

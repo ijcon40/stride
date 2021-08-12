@@ -5,9 +5,9 @@ Utility methods for playing an actual game as a human against a model.
 import sys
 from logging import getLogger
 
-from stride.src.code.agent.player_chess import ChessPlayer
-from stride.src.code.config import Config, PlayWithHumanConfig
-from stride.src.code.env.chess_env import ChessEnv
+from src.code.agent.player_chess import ChessPlayer
+from src.code.config import Config, PlayWithHumanConfig
+from src.code.env.chess_env import ChessEnv
 
 logger = getLogger(__name__)
 
@@ -61,8 +61,8 @@ def start(config: Config):
 
 
 def get_player(config):
-    from stride.src.code.agent.model_chess import ChessModel
-    from stride.src.code.lib.model_helper import load_best_model_weight
+    from src.code.agent.model_chess import ChessModel
+    from src.code.lib.model_helper import load_best_model_weight
     model = ChessModel(config)
     if not load_best_model_weight(model):
         raise RuntimeError("Best model not found!")

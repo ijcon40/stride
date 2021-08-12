@@ -10,8 +10,8 @@ from threading import Lock
 import chess
 import numpy as np
 
-from stride.src.code.config import Config
-from stride.src.code.env.chess_env import ChessEnv, Winner
+from src.code.config import Config
+from src.code.env.chess_env import ChessEnv, Winner
 
 logger = getLogger(__name__)
 

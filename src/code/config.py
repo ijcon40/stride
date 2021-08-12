@@ -156,11 +156,11 @@ class Config:
         self.resource = ResourceConfig()
 
         if config_type == "mini":
-            import stride.src.code.configs.mini as c
+            import src.code.configs.mini as c
         elif config_type == "normal":
-            import stride.src.code.configs.normal as c
+            import src.code.configs.normal as c
         elif config_type == "distributed":
-            import stride.src.code.configs.distributed as c
+            import src.code.configs.distributed as c
         else:
             raise RuntimeError(f"unknown config_type: {config_type}")
         self.model = c.ModelConfig()
